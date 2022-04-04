@@ -21,7 +21,7 @@ export default new Vuex.Store({
       try {
         const request = await axios(state.URL);
         const gamersid = request.data.map((game, i) => {
-          game.id = i;
+          game.id = "i_d" + i;
           return game;
         });
         commit("SET_GAMES", gamersid);

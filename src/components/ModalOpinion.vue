@@ -1,7 +1,7 @@
 <template>
   <div
     class="modal fade"
-    id="exampleModal"
+    :id="dataid"
     tabindex="-1"
     aria-labelledby="exampleModalLabel"
     aria-hidden="true"
@@ -36,6 +36,12 @@
 <script>
 export default {
   name: "ModalOpinion",
+  props: {
+    dataid: {
+      type: String,
+      default: "",
+    },
+  },
 };
 </script>
 

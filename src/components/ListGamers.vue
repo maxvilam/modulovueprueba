@@ -3,7 +3,7 @@
     <div class="row">
       <div
         v-for="game in listargames"
-        :key="dataid"
+        :key="game.id"
         class="card col-sm-12 m-3"
         style="width: 18rem"
       >
