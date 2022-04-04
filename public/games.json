@@ -1,0 +1,59 @@
+[
+    {
+        "name": "Grand Theft Auto V",
+        "rating": 4.48,
+        "released": "2013-09-17",
+        "updated": "2020-09-23",
+        "background_image": "https://cdn.forbes.com.mx/2020/05/Grand-Theft-Auto-V-640x360.jpg"
+    },
+    {
+        "name": "Portal 2",
+        "rating": 4.62,
+        "released": "2011-04-18",
+        "updated": "2020-08-03",
+        "background_image": "https://pivigames.blog/wp-content/uploads/2018/07/portal-2-mac-2844-0-min.jpg"
+    },
+{
+        "name": "Doom",
+        "rating": 10,
+        "released": "1993-09-17",
+        "updated": "1997-09-23",
+        "background_image": "https://cdn-3.expansion.mx/dims4/default/8bf2b76/2147483647/strip/true/crop/1280x720+0+0/resize/1800x1013!/format/webp/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F39%2Fcd%2Fae87fbb844d3bcf45c7f1faa4624%2Fdoom-1993.jpg"
+    },
+{
+        "name": "Warcraft",
+        "rating": 8.3,
+        "released": "1994-09-17",
+        "updated": "2019-09-23",
+        "background_image": "https://i.blogs.es/871532/warcraft-gog/1366_2000.jpeg"
+    },
+{
+        "name": "Starcraft",
+        "rating": 9.2,
+        "released": "1999-09-17",
+        "updated": "2019-09-23",
+        "background_image": "https://e.rpp-noticias.io/normal/2017/04/03/385638_378424.jpg"
+    },
+    {
+        "name": "Diablo III",
+        "rating": 9.8,
+        "released": "2012-01-17",
+        "updated": "2021-10-13",
+        "background_image": "https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_DiabloIIIEternalCollection_image1600w.jpg"
+    },
+    {
+        "name": "Duke Nukem",
+        "rating": 0.0,
+        "released": "1991-01-01",
+        "updated": "1993-10-13",
+        "background_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg3f6r4f1P4chDQ6nPnMHFLFw9wmkNgiGzag&usqp=CAU"
+    },
+    {
+        "name": "Montezuma's Revenge",
+        "rating": 2.0,
+        "released": "1984-01-01",
+        "updated": "1989-10-13",
+        "background_image": "https://www.latercera.com/resizer/rC-CVVcTMTb3kmxLQC4eqruKcxg=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/J6W3Y6YZDBHDJAHMPP2IHXGOPA.jpg"
+    }
+
+]
