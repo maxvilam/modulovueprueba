@@ -26,7 +26,7 @@
             </button></a
           >
         </div>
-        <ModalOpinion :dataid="game.id" />
+        <ModalOpinion :data="game" />
       </div>
     </div>
   </div>

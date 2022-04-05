@@ -8,6 +8,7 @@ export default new Vuex.Store({
   state: {
     URL: "games.json",
     games: [],
+    dataOpinion: [],
   },
   getters: {},
   mutations: {

@@ -1,15 +1,17 @@
 <template>
   <div
     class="modal fade"
-    :id="dataid"
+    :id="data.id"
     tabindex="-1"
     aria-labelledby="exampleModalLabel"
     aria-hidden="true"
   >
     <div class="modal-dialog">
       <div class="modal-content">
+        <h6 class="modal-title" id="exampleModalLabel">
+          Agrega tu opinion para el juego {{ data.name }}
+        </h6>
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
           <button
             type="button"
             class="btn-close"
@@ -17,7 +19,12 @@
             aria-label="Close"
           ></button>
         </div>
-        <div class="modal-body">...</div>
+        <div class="modal-body">
+          <section>
+            <p>Nombre: <input type="text" v-model="nameClient" /></p>
+            <p>Opiniones: <input type="text" v-model="opinionClient" /></p>
+          </section>
+        </div>
         <div class="modal-footer">
           <button
             type="button"
@@ -26,7 +33,9 @@
           >
             Close
           </button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button @click="saveOpinion" type="button" class="btn btn-primary">
+            Guarda tu opinion
+          </button>
         </div>
       </div>
     </div>
@@ -36,10 +45,35 @@
 <script>
 export default {
   name: "ModalOpinion",
+  data() {
+    return {
+      nameClient: "",
+      opinionClient: "Ingrese su opinion, Aqui",
+    };
+  },
   props: {
-    dataid: {
-      type: String,
-      default: "",
+    data: {
+      type: Object,
+      default: () => {},
+    },
+  },
+
+  methods: {
+    saveOpinion() {
+      const arrelo = [
+        '{"name": "' +
+          this.nameClient +
+          '", "opinion": "' +
+          this.opinionClient +
+          '"}',
+      ];
+      localStorage.setItem(this.data.id, arrelo);
+      /* const OpinionObject = {
+        name: this.nameClient,
+        opinion: this.opinionClient,
+        id: this.data.id,
+      };
+      console.log(OpinionObject); */
     },
   },
 };
