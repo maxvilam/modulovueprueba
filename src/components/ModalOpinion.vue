@@ -60,12 +60,16 @@ export default {
 
   methods: {
     saveOpinion() {
+      const vacioarreglo = localStorage.getItem(this.data.id)
+        ? localStorage.getItem(this.data.id)
+        : "";
       const arrelo = [
         '{"name": "' +
           this.nameClient +
           '", "opinion": "' +
           this.opinionClient +
-          '"}',
+          '"}' +
+          vacioarreglo,
       ];
       localStorage.setItem(this.data.id, arrelo);
       /* const OpinionObject = {

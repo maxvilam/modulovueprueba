@@ -13,11 +13,11 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"
-                ><router-link to="/about">Opiniones</router-link></a
+                ><router-link to="/opiniones">Opiniones</router-link></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
+              <a class="nav-link disabled">Administración</a>
             </li>
           </ul>
         </div>
