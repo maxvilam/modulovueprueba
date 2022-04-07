@@ -47,6 +47,7 @@ export default {
   name: "ModalOpinion",
   data() {
     return {
+      nombredatals: "GameOpinion",
       nameClient: "",
       opinionClient: "Ingrese su opinion, Aqui",
     };
@@ -60,18 +61,23 @@ export default {
 
   methods: {
     saveOpinion() {
-      const vacioarreglo = localStorage.getItem(this.data.id)
-        ? localStorage.getItem(this.data.id)
-        : "";
-      const arrelo = [
-        '{"name": "' +
-          this.nameClient +
-          '", "opinion": "' +
-          this.opinionClient +
-          '"}' +
-          vacioarreglo,
-      ];
-      localStorage.setItem(this.data.id, arrelo);
+      /* const vacioarreglo = localStorage.getItem(this.nombredatals)
+        ? "," + localStorage.getItem(this.nombredatals)
+        : ""; */
+      const arrelo = new Array({
+        namegame: this.data.name,
+        nombre: this.nameClient,
+        opinion: this.opinionClient,
+      });
+      console.log("antes el local", localStorage.getItem(this.nombredatals));
+      console.log("antes", localStorage.length);
+      console.log(arrelo.length);
+      console.log("despues", localStorage.getItem.length);
+      localStorage.setItem(this.nombredatals, JSON.stringify(arrelo));
+      const vacioarreglo = localStorage.getItem(this.nombredatals);
+      console.log("despues el local", JSON.parse(vacioarreglo));
+      console.log("nombre", vacioarreglo.mombre);
+      arrelo.forEach((i) => console.log("indice", i.nombre));
       /* const OpinionObject = {
         name: this.nameClient,
         opinion: this.opinionClient,
