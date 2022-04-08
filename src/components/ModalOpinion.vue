@@ -61,29 +61,48 @@ export default {
 
   methods: {
     saveOpinion() {
-      /* const vacioarreglo = localStorage.getItem(this.nombredatals)
-        ? "," + localStorage.getItem(this.nombredatals)
-        : ""; */
-      const arrelo = new Array({
+      console.log("AAA:", localStorage.length + 1);
+      const nameGame = this.data.name,
+        name = this.nameClient,
+        opinion = this.opinionClient,
+        nombreId = this.nombredatals;
+      function myFuncion() {
+        if (localStorage.length === 0) {
+          /* Caso Nada */
+          const dato0 = new Array({
+            namegame: nameGame,
+            nombre: name,
+            opinion: opinion,
+          });
+          console.log("Si");
+          return dato0;
+        } else {
+          /* Caso Existe */
+          const dataold = JSON.parse(localStorage.getItem(nombreId));
+          const dataNew = new Array({
+            namegame: nameGame,
+            nombre: name,
+            opinion: opinion,
+          });
+          const dato3 = dataold.concat(dataNew);
+          console.log("No");
+          return dato3;
+        }
+      }
+
+      const Opinion = myFuncion();
+      /* const Opinion = new Array({
         namegame: this.data.name,
         nombre: this.nameClient,
         opinion: this.opinionClient,
-      });
-      console.log("antes el local", localStorage.getItem(this.nombredatals));
-      console.log("antes", localStorage.length);
-      console.log(arrelo.length);
-      console.log("despues", localStorage.getItem.length);
-      localStorage.setItem(this.nombredatals, JSON.stringify(arrelo));
-      const vacioarreglo = localStorage.getItem(this.nombredatals);
-      console.log("despues el local", JSON.parse(vacioarreglo));
-      console.log("nombre", vacioarreglo.mombre);
-      arrelo.forEach((i) => console.log("indice", i.nombre));
-      /* const OpinionObject = {
-        name: this.nameClient,
-        opinion: this.opinionClient,
-        id: this.data.id,
-      };
-      console.log(OpinionObject); */
+      }); */
+      /*       const Old = JSON.parse(localStorage.getItem(this.nombredatals));
+       */
+      /* const Old = JSON.parse(localStorage.getItem(nombreId)); */
+
+      console.log("antes el local", localStorage.getItem(nombreId));
+      localStorage.setItem(nombreId, JSON.stringify(Opinion));
+      Opinion.forEach((i) => console.log("Nombre:", i.nombre));
     },
   },
 };

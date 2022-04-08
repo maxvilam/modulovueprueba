@@ -14,7 +14,6 @@ export default new Vuex.Store({
   mutations: {
     SET_GAMES(state, games) {
       state.games = games;
-      console.log(state.games);
     },
   },
   actions: {
@@ -26,8 +25,6 @@ export default new Vuex.Store({
           return game;
         });
         commit("SET_GAMES", gamersid);
-        console.log(request.data);
-        console.log(gamersid);
       } catch (error) {
         console.log(error);
       }
