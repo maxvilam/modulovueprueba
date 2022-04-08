@@ -7,17 +7,21 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
+              <a class="nav-link active" aria-current="page" href="/"
                 ><router-link to="/">Home</router-link></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"
+              <a class="nav-link" href="/opiniones"
                 ><router-link to="/opiniones">Opiniones</router-link></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled">Administración</a>
+              <a class="nav-link" href="/admin"
+                ><router-link to="/administracion"
+                  >Administración</router-link
+                ></a
+              >
             </li>
           </ul>
         </div>

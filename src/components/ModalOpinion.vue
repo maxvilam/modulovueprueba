@@ -61,7 +61,7 @@ export default {
 
   methods: {
     saveOpinion() {
-      console.log("AAA:", localStorage.length + 1);
+      /* console.log("AAA:", localStorage.length + 1); */
       const nameGame = this.data.name,
         name = this.nameClient,
         opinion = this.opinionClient,
@@ -91,18 +91,18 @@ export default {
       }
 
       const Opinion = myFuncion();
-      /* const Opinion = new Array({
-        namegame: this.data.name,
-        nombre: this.nameClient,
-        opinion: this.opinionClient,
-      }); */
-      /*       const Old = JSON.parse(localStorage.getItem(this.nombredatals));
-       */
-      /* const Old = JSON.parse(localStorage.getItem(nombreId)); */
-
-      console.log("antes el local", localStorage.getItem(nombreId));
+      /* console.log("antes el local", localStorage.getItem(nombreId)); */
       localStorage.setItem(nombreId, JSON.stringify(Opinion));
-      Opinion.forEach((i) => console.log("Nombre:", i.nombre));
+      Opinion.forEach((i) =>
+        console.log(
+          "Numbre Game:",
+          i.namegame,
+          "Nombre:",
+          i.nombre,
+          "Opinion:",
+          i.opinion
+        )
+      );
     },
   },
 };

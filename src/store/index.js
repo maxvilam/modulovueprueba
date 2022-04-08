@@ -9,9 +9,13 @@ export default new Vuex.Store({
     URL: "games.json",
     games: [],
     dataOpinion: [],
+    dataLocal: [],
   },
   getters: {},
   mutations: {
+    SETLOCAL(state, payload) {
+      state.dataLocal = payload;
+    },
     SET_GAMES(state, games) {
       state.games = games;
     },
