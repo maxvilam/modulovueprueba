@@ -93,7 +93,7 @@ export default {
       const Opinion = myFuncion();
       /* console.log("antes el local", localStorage.getItem(nombreId)); */
       localStorage.setItem(nombreId, JSON.stringify(Opinion));
-      Opinion.forEach((i) =>
+      /*       Opinion.forEach((i) =>
         console.log(
           "Numbre Game:",
           i.namegame,
@@ -102,7 +102,7 @@ export default {
           "Opinion:",
           i.opinion
         )
-      );
+      ); */
     },
   },
 };

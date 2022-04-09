@@ -11,17 +11,31 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(data, i) in LocalData" :key="i">
-          <th>{{ i + 1 }}</th>
+        <tr v-for="(data, iterador) in LocalData" :key="data.nombre">
+          <th>{{ iterador + 1 }}</th>
           <td>{{ data.nombre }}</td>
           <td>{{ data.namegame }}</td>
           <td>{{ data.opinion }}</td>
           <td>
-            <button v-on:click="elimina(i)" class="btn btn-danger">
+            <button v-on:click="elimina(iterador)" class="btn btn-danger">
               Eliminar
             </button>
           </td>
-          <td><button class="btn btn-info">Editar</button></td>
+          <td>
+            <div class="card-body">
+              <a href="#" class="card-link"
+                ><button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  :data-bs-target="'#' + data.nombre"
+                >
+                  Opinar
+                </button></a
+              >
+              <ModalEditar :dataobject="data" :ideditar="iterador" />
+            </div>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -29,6 +43,7 @@
 </template>
 
 <script>
+import ModalEditar from "@/components/ModalEditar.vue";
 export default {
   name: "OpinionesView",
   data() {
@@ -36,6 +51,9 @@ export default {
       nombreId: "GameOpinion",
       LocalData: [],
     };
+  },
+  components: {
+    ModalEditar,
   },
   props: {
     Local: {
