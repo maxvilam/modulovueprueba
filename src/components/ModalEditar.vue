@@ -12,16 +12,20 @@
             <p>Opiniones: <input type="text" v-model="opinionClient" /></p>
           </div>
           <div class="modal-footer">
-            <button type="button" @click="guardar" class="btn btn-primary">
-              Guardar cambios
-            </button>
             <button
               type="button"
-              class="btn close btn-secondary"
-              data-dismiss="modal"
-              aria-label="Close"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
             >
-              Cerrar
+              Close
+            </button>
+            <button
+              @click="guardar"
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Guarda cambios
             </button>
           </div>
         </div>
@@ -52,16 +56,16 @@ export default {
       default: () => 0,
     },
   },
-  computed: {
-    name() {
-      return this.nom;
-    },
-  },
   created() {
     this.LocalData = JSON.parse(localStorage.getItem(this.nombredatals));
     this.nameClient = this.dataobject.nombre;
     this.opinionClient = this.dataobject.opinion;
     this.namegame = this.dataobject.namegame;
+  },
+  computed: {
+    datatabla() {
+      return this.LocalData;
+    },
   },
   methods: {
     guardar() {
@@ -73,6 +77,7 @@ export default {
       });
       data[this.ideditar] = objeto;
       localStorage.setItem(this.nombredatals, JSON.stringify(data));
+      alert("Se guardo la edicion");
     },
   },
 };

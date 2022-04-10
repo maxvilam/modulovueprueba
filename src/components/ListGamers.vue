@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <h1 class="mb-5 mt-5">Lista de Juegos Disponibles</h1>
     <div class="row">
       <div
         v-for="game in listargames"
@@ -21,7 +22,11 @@
         </ul>
         <div class="card-body">
           <a href="#" class="card-link"
-            ><button data-bs-toggle="modal" :data-bs-target="'#' + game.id">
+            ><button
+              data-bs-toggle="modal"
+              class="btn btn-primary"
+              :data-bs-target="'#' + game.id"
+            >
               Opinar
             </button></a
           >

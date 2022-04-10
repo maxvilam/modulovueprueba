@@ -33,7 +33,12 @@
           >
             Close
           </button>
-          <button @click="saveOpinion" type="button" class="btn btn-primary">
+          <button
+            @click="saveOpinion"
+            type="button"
+            class="btn btn-primary"
+            data-bs-dismiss="modal"
+          >
             Guarda tu opinion
           </button>
         </div>
@@ -93,6 +98,7 @@ export default {
       const Opinion = myFuncion();
       /* console.log("antes el local", localStorage.getItem(nombreId)); */
       localStorage.setItem(nombreId, JSON.stringify(Opinion));
+      alert("Se guardo la edicion");
       /*       Opinion.forEach((i) =>
         console.log(
           "Numbre Game:",
