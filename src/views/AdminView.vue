@@ -39,7 +39,6 @@
             </td>
           </tr>
         </tbody>
-        <p>data: {{ datactualizada }}</p>
       </table>
     </section>
 
