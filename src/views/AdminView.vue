@@ -23,19 +23,17 @@
               </button>
             </td>
             <td>
-              <div class="card-body">
-                <a href="#" class="card-link"
-                  ><button
-                    type="button"
-                    class="btn btn-primary"
-                    data-bs-toggle="modal"
-                    :data-bs-target="'#' + data.nombre"
-                  >
-                    Opinar
-                  </button></a
+              <a href="#" class="card-link"
+                ><button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  :data-bs-target="'#' + data.nombre"
                 >
-                <ModalEditar :dataobject="data" :ideditar="iterador" />
-              </div>
+                  Modificar Opinión
+                </button></a
+              >
+              <ModalEditar :dataobject="data" :ideditar="iterador" />
             </td>
           </tr>
         </tbody>
