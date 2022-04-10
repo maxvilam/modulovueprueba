@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Lista de Opiniones</h1>
+    <h1 class="mb-5 mt-5">Lista de Opiniones</h1>
     <div v-if="LocalData != null">
       <section v-for="(data, i) in LocalData" :key="i">
         <h4 class="p-3 border bg-light text-left">

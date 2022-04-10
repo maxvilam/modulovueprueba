@@ -7,7 +7,7 @@
             <h5 class="modal-title">Edicion de Opinion</h5>
           </div>
           <div class="modal-body">
-            <p>Editando opinion</p>
+            <p>Editando Opinion</p>
             <p>Nombre: <input type="text" v-model="nameClient" /></p>
             <p>Opiniones: <input type="text" v-model="opinionClient" /></p>
           </div>
